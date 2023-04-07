@@ -37,6 +37,7 @@ Then the app should display the movie list saved
 ```
 
 ## App Architecture
+![Mufee](https://user-images.githubusercontent.com/42885960/230673638-1e4f45d5-981f-47c8-a099-9929a131c6b3.png)
 
 
 ### Payload contract
