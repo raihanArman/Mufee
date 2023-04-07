@@ -2,6 +2,7 @@ package com.example.mufee
 
 import android.app.Application
 import com.example.mufee.libs.koin.KoinStarter
+import com.example.mufee.ui.feature.movie.di.MovieModule
 
 /**
  * @author Raihan Arman
@@ -14,6 +15,7 @@ class MainApplication: Application() {
         KoinStarter.onCreate(
             this,
             listOf(
+                MovieModule.modules()
             )
         )
     }

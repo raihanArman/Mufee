@@ -1,4 +1,4 @@
-package com.example.mufee.ui.feature
+package com.example.mufee.ui.feature.movie
 
 import com.example.mufee.domain.model.DataMovieModel
 
