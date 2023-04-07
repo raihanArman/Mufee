@@ -10,6 +10,6 @@ import org.koin.dsl.module
  */
 object RepositoryModule {
     fun modules() = module {
-        single<MovieRepository> { MovieRepositoryImpl(get()) }
+        single<MovieRepository> { MovieRepositoryImpl(get(), get()) }
     }
 }

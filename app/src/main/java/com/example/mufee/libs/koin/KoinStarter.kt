@@ -2,8 +2,10 @@ package com.example.mufee.libs.koin
 
 import android.content.Context
 import com.example.mufee.data.di.ApiClientModule
+import com.example.mufee.data.di.DaoModule
 import com.example.mufee.data.di.RepositoryModule
 import com.example.mufee.domain.di.UseCaseModule
+import com.example.mufee.libs.database.DatabaseModule
 import com.example.mufee.libs.network.NetworkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -16,8 +18,10 @@ import org.koin.core.module.Module
 object KoinStarter {
     fun onCreate(context: Context, featureModule: List<Module> = emptyList()) {
         val modules = listOf(
+            DatabaseModule.modules(),
             NetworkModule.modules(),
             ApiClientModule.modules(),
+            DaoModule.modules(),
             RepositoryModule.modules(),
             UseCaseModule.modules(),
         ) + featureModule
